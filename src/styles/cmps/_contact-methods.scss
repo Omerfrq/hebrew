@@ -1,0 +1,19 @@
+.contact-methods {
+    @include bg-opacity(#ffff, 0.1);
+    width: calc(100% + 50px);
+    height: 68px;
+    border-radius: 10px;
+    align-self: center;
+    // bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+        width: 35px;
+    }
+
+    .facebookLogo {
+        width: 22px;
+    }
+}

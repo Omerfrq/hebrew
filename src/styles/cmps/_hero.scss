@@ -1,0 +1,22 @@
+.hero {
+    height: 80vh;
+    background-color: grey;
+    // background-image: url("../../assets/images/hero.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        font-size: rem(50px);
+        text-align: right;
+        color: white;
+        text-align: center;
+
+        // @include for-normal-layout {
+        //     text-align: right;
+        // }
+    }
+}

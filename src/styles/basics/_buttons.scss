@@ -1,0 +1,16 @@
+.price-suggestion {
+    background-color: $red;
+    width: 280px;
+    height: 46px;
+    color: $white;
+    border-radius: 50px;
+    font-family: Open-Sans-Regular;
+    font-size: rem(21px);
+
+    &:hover {
+        color: $red;
+        font-weight: 700;
+        background-color: $white;
+        border: 2px solid $red;
+    }
+}

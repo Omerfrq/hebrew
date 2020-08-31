@@ -1,0 +1,32 @@
+@import "./setup/variables.scss";
+
+// Setup
+// @import "setup/variables.scss";
+@import "./setup/_variables";
+@import "./setup/_functions.scss";
+@import "./setup/_mixins.scss";
+
+//CM: Basics
+@import "./basics/_helpers.scss";
+@import "./basics/_layout.scss";
+@import "./basics/_base.scss";
+@import "./basics/_typography.scss";
+@import "./basics/_buttons.scss";
+@import "./basics/_animation.scss";
+
+@import "./views/_introduction.scss";
+@import "./views/_who-are-we.scss";
+//CM: each of those file responsible for component
+// @import "cmps/hero.scss";
+@import "./cmps/_navbar.scss";
+@import "./cmps/_contact-us.scss";
+@import "./cmps/_footer.scss";
+// @import "cmps/services.scss";
+// @import "cmps/form.scss";
+@import "./cmps/_contact-methods.scss";
+@import "./cmps/_header.scss";
+// @import "cmps/clients.scss";
+// @import "cmps/footer.scss";
+
+//views
+// @import "views/main.scss";
