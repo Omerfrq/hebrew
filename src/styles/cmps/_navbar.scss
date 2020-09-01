@@ -40,7 +40,7 @@
   height: 100%;
 }
 
-.nav > .nav-links > a {
+.nav .nav-links a {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
@@ -52,7 +52,7 @@
   margin-right: 2rem;
 }
 
-.nav > .nav-links > a:hover {
+.nav .nav-links a:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -74,6 +74,16 @@
 
     @include narrow {
       width: 300px;
+    }
+  }
+
+  .nav-links-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+
+    @include mobile {
+      margin-top: 0;
     }
   }
 
@@ -132,9 +142,18 @@
     top: 70px;
     overflow-y: auto;
 
+    @include mobile {
+      top: 69px;
+      padding-top: 5rem;
+    }
+
     button {
       position: absolute;
-      bottom: 3rem;
+      bottom: 5rem;
+
+      @include mobile {
+        bottom: 35%;
+      }
     }
   }
 }

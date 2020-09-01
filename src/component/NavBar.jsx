@@ -38,8 +38,11 @@ const NavBar = () => {
         <div className='logo-in-links'>
           <img alt='logo' src={logo} />
         </div>
-        <Link to='/measurements'>מדידות ומיפוי</Link>
-        <Link to='/3d'>תלת מימד</Link>
+
+        <div className='nav-links-box'>
+          <Link to='/measurements'>מדידות ומיפוי</Link>
+          <Link to='/3d'>תלת מימד</Link>
+        </div>
 
         <button onClick={() => history.push('/')} className='price-suggestion'>
           קבלו הצעת מחיר
