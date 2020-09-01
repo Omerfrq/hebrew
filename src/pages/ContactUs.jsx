@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 
 import Phone from '../assets/images/ContactUs/phone.png';
@@ -12,8 +12,10 @@ import FormDescription from '../assets/images/ContactUs/Icons/description.png';
 import FormAddress from '../assets/images/ContactUs/Icons/address.png';
 import { useForm } from 'react-hook-form';
 import { EMAIL } from '../email-config';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-console.log(EMAIL);
+import axios from 'axios';
 
 const ContactUS = () => {
   var settings = {
@@ -58,14 +60,35 @@ const ContactUS = () => {
     ],
   };
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
+
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = (data) => {
-    console.log(data);
+    setLoading(true);
+    const messageBody = {
+      ...data,
+      subject: 'contact',
+      to: EMAIL,
+    };
+
+    axios
+      .post('/', messageBody)
+      .then((res) => {
+        console.log(res.data);
+        setLoading(false);
+        reset();
+        toast.success('Email Sent Successfully');
+      })
+      .catch((err) => {
+        toast.error('Unable To Send Email');
+        setLoading(false);
+      });
   };
 
   return (
     <div className='contact-us'>
+      <ToastContainer />
       <div className='container'>
         <div className='work-with'>
           <h1>עם מי עבדנו?</h1>
@@ -110,7 +133,7 @@ const ContactUS = () => {
               <img src={FormMail} alt='mail' />
               <input
                 type='email'
-                name='email'
+                name='from'
                 placeholder='*מייל'
                 ref={register}
                 required
@@ -147,7 +170,7 @@ const ContactUS = () => {
             <div className='decription'>
               <img src={FormDescription} alt='phone' />
               <input
-                name='description'
+                name='text'
                 placeholder="פרטו לנו גוש מס/' חלקה"
                 ref={register}
                 required
@@ -163,8 +186,12 @@ const ContactUS = () => {
               />
             </div>
             <div>
-              <button type='submit' className='price-suggestion'>
-                קבלו הצעת מחיר
+              <button
+                type='submit'
+                disabled={loading}
+                className='price-suggestion'
+              >
+                {loading ? '....שליחת דוא"ל' : '  קבלו הצעת מחיר'}
               </button>
             </div>
           </form>
