@@ -1,11 +1,24 @@
 import React from 'react';
 import logo from '../assets/images/General/logo.png';
 import { Link, useHistory } from 'react-router-dom';
+import { useState } from 'react';
 
 const NavBar = () => {
   const history = useHistory();
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 150) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBackground);
+
   return (
-    <div className='nav'>
+    <div className={navbar ? 'nav active' : 'nav'}>
       <div class='nav-btn'>
         <label for='nav-check'>
           <span></span>

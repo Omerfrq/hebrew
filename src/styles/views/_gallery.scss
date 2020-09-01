@@ -1,0 +1,102 @@
+.gallery {
+  margin: 4rem auto;
+  .gallery-wrap {
+    margin-bottom: 6rem;
+    display: grid;
+    justify-content: center;
+    div {
+      cursor: pointer;
+      position: relative;
+      height: 240px;
+
+      img {
+        height: 100%;
+        border-radius: 0.6rem;
+      }
+
+      span {
+        width: 80%;
+        font-size: 75%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: rgba(38, 34, 34, 0.94);
+        color: white;
+
+        .gallery-overlay-text {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+
+          b {
+            font-size: 65%;
+            width: 70%;
+            margin: 0 auto 0.6rem;
+          }
+
+          small {
+            font-size: 45%;
+          }
+        }
+      }
+
+      &:hover .gallery-overlay {
+        opacity: 1;
+        border-radius: 0.5rem;
+      }
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, 0.65fr);
+      grid-gap: 80px;
+    }
+    @include narrow {
+      grid-template-columns: repeat(1, 0.31fr);
+      grid-gap: 50px;
+    }
+    @include normal {
+      grid-template-columns: repeat(2, 0.3fr);
+      grid-gap: 100px;
+    }
+    @include wide {
+      grid-template-columns: repeat(3, 0.18fr);
+      grid-gap: 90px;
+    }
+    text-align: center;
+    font-family: Assistant-Semi-Bold;
+    font-size: 1.5rem;
+  }
+
+  .gallery-button {
+    text-align: center;
+
+    button {
+      height: 55px;
+      font-size: 1rem;
+    }
+
+    @include mobile {
+      button {
+        height: 46px;
+        width: 57%;
+      }
+    }
+  }
+}

@@ -1,22 +1,39 @@
 .hero {
-    height: 80vh;
-    background-color: grey;
-    // background-image: url("../../assets/images/hero.jpg");
-    // background-repeat: no-repeat;
-    // background-size: cover;
+  background-color: grey;
+  background-image: url('https://cdn.pixabay.com/photo/2014/01/04/12/34/street-238458_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @include mobile {
+    height: 50vh;
+  }
 
-    p {
-        font-size: rem(50px);
-        text-align: right;
-        color: white;
-        text-align: center;
+  @include narrow {
+    height: 90vh;
+  }
 
-        // @include for-normal-layout {
-        //     text-align: right;
-        // }
-    }
+  @include normal {
+    height: 75vh;
+  }
+
+  @include wide {
+    height: 50vh;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    font-size: rem(20px);
+    text-align: right;
+    color: white;
+    text-align: center;
+
+    // @include for-normal-layout {
+    //     text-align: right;
+    // }
+  }
 }

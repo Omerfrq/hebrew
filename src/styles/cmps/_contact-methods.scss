@@ -1,19 +1,38 @@
 .contact-methods {
-    @include bg-opacity(#ffff, 0.1);
-    width: calc(100% + 50px);
-    height: 68px;
-    border-radius: 10px;
-    align-self: center;
-    // bottom: 20px;
+  @include bg-opacity(#ffff, 0.1);
+  width: calc(100% + 50px);
+  height: 68px;
+  border-radius: 10px;
+  align-self: center;
+  // bottom: 20px;
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+
+  img {
+    width: 35px;
+  }
+
+  .facebookLogo {
+    width: 22px;
+  }
+
+  @include mobile {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    border-radius: 0;
+    margin-bottom: 0 !important;
+    width: 100%;
+    @include bg-opacity(#0f1423, 1);
+    z-index: 100;
 
     img {
-        width: 35px;
+      width: 30px;
     }
 
     .facebookLogo {
-        width: 22px;
+      width: 18px;
     }
+  }
 }
