@@ -30,6 +30,9 @@
   }
 
   @include mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     bottom: 35%;
     position: absolute;
   }
