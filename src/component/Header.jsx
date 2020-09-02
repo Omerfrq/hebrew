@@ -12,7 +12,7 @@ const Header = () => {
             <h1>גיוטק-המומחים למדידות</h1>
             <h2>מודדים מוסמכים והנדסה אזרחית</h2>
           </div>
-          <button className='price-suggestion'>קבלו הצעת מחיר</button>
+          <button onClick={()=>window.location.href='#contact-form'} className='price-suggestion'>קבלו הצעת מחיר</button>
           <div className='down-arrow bounce'>
             <img src={DownArrow} alt='down-arrow' />
           </div>

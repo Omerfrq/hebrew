@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from '../assets/images/General/logo.png';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const NavBar = () => {
-  const history = useHistory();
+  
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -44,7 +44,7 @@ const NavBar = () => {
           <Link to='/3d'>תלת מימד</Link>
         </div>
 
-        <button onClick={() => history.push('/')} className='price-suggestion'>
+        <button onClick={()=>window.location.href='#contact-form'} className='price-suggestion'>
           קבלו הצעת מחיר
         </button>
       </div>

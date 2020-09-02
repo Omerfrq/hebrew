@@ -60,6 +60,7 @@ const ContactUS = () => {
     ],
   };
 
+ 
   const { register, handleSubmit, reset } = useForm();
 
   const [loading, setLoading] = useState(false);
@@ -87,13 +88,13 @@ const ContactUS = () => {
   };
 
   return (
-    <div className='contact-us'>
+    <div id='contact-form' className='contact-us'>
       <ToastContainer />
       <div className='container'>
         <div className='work-with'>
           <h1>עם מי עבדנו?</h1>
 
-          <Slider className='logos' {...settings}>
+          <Slider arrows className='logos' {...settings}>
             <div>LOGO</div>
             <div>LOGO</div>
             <div>LOGO</div>
@@ -185,7 +186,9 @@ const ContactUS = () => {
                 required
               />
             </div>
-            <div>
+            <div style={{
+              background:'none'
+            }}>
               <button
                 type='submit'
                 disabled={loading}
