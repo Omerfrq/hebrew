@@ -14,6 +14,19 @@
 .nav > .nav-header {
   display: inline;
 }
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 5rem;
+
+  @include mobile {
+    bottom: 35%;
+  }
+}
+
 .price-suggestion {
   margin-right: 1rem;
 }
@@ -67,18 +80,27 @@
 @include mobile-and-narrow {
   .logo-in-links {
     display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: unset !important;
 
     @include mobile {
-      width: 206px;
+      img {
+        width: 206px;
+      }
     }
 
     @include narrow {
-      width: 300px;
+      img {
+        width: 300px;
+      }
     }
   }
 
   .nav-links-box {
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-top: 6rem;
 
@@ -145,15 +167,6 @@
     @include mobile {
       top: 69px;
       padding-top: 5rem;
-    }
-
-    button {
-      position: absolute;
-      bottom: 5rem;
-
-      @include mobile {
-        bottom: 35%;
-      }
     }
   }
 }
