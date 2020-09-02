@@ -32,3 +32,16 @@
 
 //views
 // @import "views/main.scss";
+
+.Toastify__toast--success {
+  background: #0f1423 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.active-red {
+  color:#be1e2d !important;
+  font-weight: 700;
+}

@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import axios from 'axios';
+
+const baseURL = 'https://omer-mail-service.herokuapp.com/';
+
+if (process.env.API) axios.defaults.baseURL = process.env.API;
+else axios.defaults.baseURL = baseURL;
 
 ReactDOM.render(
   <React.StrictMode>
