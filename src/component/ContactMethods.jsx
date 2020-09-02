@@ -8,7 +8,8 @@ import WhatsApp from '../assets/images/ContactMethods/Option1/whatsapp.png';
 const ContactMethods = () => {
   return (
     <div className='contact-methods'>
-      <img src={MailLogo} alt='mail-logo' />
+      <a href="#contact-form"> <img src={MailLogo} alt='mail-logo' /></a>
+     
       <a href='tel:972543144332'>
         <img src={PhoneLogo} alt='phone' />
       </a>
