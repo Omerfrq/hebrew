@@ -16,14 +16,22 @@
 }
 
 .price-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  position: absolute;
-  bottom: 5rem;
+  @include normal {
+    width: unset !important;
+    position: unset !important;
+  }
+
+  @include narrow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 5rem;
+  }
 
   @include mobile {
     bottom: 35%;
+    position: absolute;
   }
 }
 
@@ -62,7 +70,17 @@
 }
 
 .nav > .nav-links :nth-child(1) {
-  margin-right: 2rem;
+  @include normal {
+    margin-right: 2rem !important;
+  }
+
+  @include narrow {
+    margin-right: unset;
+  }
+
+  @include mobile {
+    margin-right: unset;
+  }
 }
 
 .nav .nav-links a:hover {
@@ -88,12 +106,14 @@
     @include mobile {
       img {
         width: 206px;
+        margin-right: unset !important;
       }
     }
 
     @include narrow {
       img {
         width: 300px;
+        margin-right: unset !important;
       }
     }
   }
@@ -105,7 +125,7 @@
     margin-top: 6rem;
 
     @include mobile {
-      margin-top: 0;
+      margin-top: 2.5rem;
     }
   }
 
