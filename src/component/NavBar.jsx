@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/images/General/logo.png';
-import { Link } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
 const NavBar = () => {
@@ -29,9 +29,9 @@ const NavBar = () => {
       <input type='checkbox' id='nav-check' />
       <div class='nav-header'>
         <div class='nav-title'>
-          <Link to='/'>
+          <NavLink activeClassName='active-red' to='/'>
             <img alt='logo' src={logo} />
-          </Link>
+          </NavLink>
         </div>
       </div>
       <div class='nav-links'>
@@ -40,11 +40,11 @@ const NavBar = () => {
         </div>
 
         <div className='nav-links-box'>
-          <Link to='/measurements'>מדידות ומיפוי</Link>
-          <Link to='/3d'>תלת מימד</Link>
+          <NavLink activeClassName='active-red' to='/measurements'>מדידות ומיפוי</NavLink>
+          <NavLink activeClassName='active-red' to='/3d'>תלת מימד</NavLink>
         </div>
 
-        <button onClick={()=>window.location.href='#contact-form'} className='price-suggestion'>
+        <button onClick={()=>window.location.href=`${window.location.origin}/#contact-form`} className='price-suggestion'>
           קבלו הצעת מחיר
         </button>
       </div>

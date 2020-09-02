@@ -4,6 +4,8 @@ import three from '../assets/images/Introduction/3d.png';
 import plan from '../assets/images/Introduction/plan.png';
 import drone from '../assets/images/Introduction/drone.png';
 
+import {Link} from 'react-router-dom'
+
 const introduction = () => {
   return (
     <section className='introduction container'>
@@ -18,24 +20,32 @@ const introduction = () => {
       </div>
       <div className='logos'>
         <div>
+          <Link to='/3d'>
           <img src={drone} alt='drones and airplane scanning' />
+          </Link>
           <span>רחפנים - מדידה/צילום אוויר</span>
         </div>
         <div>
+          <Link to='/measurements'>
           <img src={plan} alt='making plans' />
+          </Link>
           <span>הכנת תוכניות</span>
         </div>
         <div>
+          <Link to='/3d'>
           <img src={three} alt='3d dimensions scan' />
+          </Link>
           <span>סריקות ומידול תלת מימדי</span>
         </div>
         <div>
+        <Link to='/measurements'>
           <img src={projects} alt='projects' />
+          </Link>
           <span>ליווי וביצוע פרויקטים</span>
         </div>
       </div>
       <div>
-        <button className='price-suggestion'>קבלו הצעת מחיר</button>
+        <button onClick={()=>window.location.href=`${window.location.origin}/#contact-form`} className='price-suggestion'>קבלו הצעת מחיר</button>
       </div>
     </section>
   );

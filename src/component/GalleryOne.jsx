@@ -105,7 +105,7 @@ const GalleryOne = () => {
         />
       </div>
       <div className='gallery-button'>
-        <button className='price-suggestion'>קבלו הצעת מחיר</button>
+        <button onClick={() => window.location.href =`${window.location.origin}/#contact-form`} className='price-suggestion'>קבלו הצעת מחיר</button>
       </div>
     </section>
   );
