@@ -1,52 +1,52 @@
 .introduction {
-    min-height: 100vh;
+  min-height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 8rem;
+  padding-bottom: 9rem;
+  height: 100%;
+
+  .title {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    height: 100%;
-
-    .title {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        p {
-            margin-top: 2rem;
-            font-size: 1.5rem;
-            font-family: Assistant-Regular;
-        }
+    p {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      font-family: Assistant-Regular;
     }
-    .logos {
-        display: grid;
-        justify-content: center;
-        div {
-            cursor: pointer;
-        }
-        @include mobile {
-            grid-template-columns: repeat(1, 0.5fr);
-            grid-gap: 30px;
-        }
-        @include narrow {
-            grid-template-columns: repeat(2, 0.5fr);
-            grid-gap: 50px;
-        }
-        @include normal {
-            grid-template-columns: repeat(2, 0.4fr);
-            grid-gap: 60px;
-        }
-        @include wide {
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 80px;
-        }
-        text-align: center;
-        font-family: Assistant-Semi-Bold;
-        font-size: 1.5rem;
+  }
+  .logos {
+    display: grid;
+    justify-content: center;
+    div {
+      cursor: pointer;
     }
-    .price-suggestion {
-        margin-top: 2rem;
+    @include mobile {
+      grid-template-columns: repeat(1, 0.5fr);
+      grid-gap: 30px;
     }
+    @include narrow {
+      grid-template-columns: repeat(2, 0.5fr);
+      grid-gap: 50px;
+    }
+    @include normal {
+      grid-template-columns: repeat(2, 0.4fr);
+      grid-gap: 60px;
+    }
+    @include wide {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 80px;
+    }
+    text-align: center;
+    font-family: Assistant-Semi-Bold;
+    font-size: 1.5rem;
+  }
+  .price-suggestion {
+    margin-top: 6rem;
+  }
 }

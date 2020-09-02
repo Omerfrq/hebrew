@@ -1,74 +1,84 @@
 header {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
+  background-color: $dark-blue;
+  color: $white;
+
+  .container {
     background-color: $dark-blue;
-    color: $white;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
 
-    .container {
-        background-color: $dark-blue;
-        display: flex;
-        align-items: flex-end;
-        height: 100%;
+  //   .video {
+  //     filter: brightness(0.3);
+  //     position: absolute;
+  //     width: 100%;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //   }
+
+  .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: calc(100% - 160px);
+
+    // h1 {
+    //     @include mobile {
+    //         font-size: 1rem;
+    //     }
+    //     @include narrow {
+    //         font-size: rem(82px);
+    //     }
+    //     @include mobile {
+    //         font-size: rem(95px);
+    //     }
+    // }
+
+    h1 {
+      font-size: rem(52px);
+
+      @include narrow {
+        font-size: rem(62px);
+      }
+      @include normal {
+        font-size: rem(82px);
+      }
     }
 
-    .content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: calc(100% - 160px);
+    h2 {
+      margin-top: 1.5rem;
+      font-family: Assistant-Light;
+      margin-bottom: 3.25rem;
+      font-size: rem(22px);
 
-        // h1 {
-        //     @include mobile {
-        //         font-size: 1rem;
-        //     }
-        //     @include narrow {
-        //         font-size: rem(82px);
-        //     }
-        //     @include mobile {
-        //         font-size: rem(95px);
-        //     }
-        // }
-
-        h1 {
-            font-size: rem(52px);
-
-            @include narrow {
-                font-size: rem(62px);
-            }
-            @include normal {
-                font-size: rem(82px);
-            }
-        }
-
-        h2 {
-            margin-top: 1.5rem;
-            font-family: Assistant-Light;
-            margin-bottom: 3.25rem;
-            font-size: rem(22px);
-
-            @include narrow {
-                font-size: rem(32px);
-            }
-            @include normal {
-                font-size: rem(42px);
-            }
-        }
-        .down-arrow {
-            width: 14px;
-            display: flex;
-            align-items: flex-end;
-            flex-grow: 0.7;
-
-            @include narrow {
-                width: 25px;
-            }
-        }
-
-        .contact-methods {
-            margin-top: auto;
-            margin-bottom: 10px;
-        }
+      @include narrow {
+        font-size: rem(32px);
+      }
+      @include normal {
+        font-size: rem(42px);
+      }
     }
+    .down-arrow {
+      width: 14px;
+      display: flex;
+      align-items: flex-end;
+      flex-grow: 0.7;
+
+      @include narrow {
+        width: 25px;
+      }
+    }
+
+    .contact-methods {
+      margin-top: auto;
+      margin-bottom: 10px;
+    }
+  }
 }
