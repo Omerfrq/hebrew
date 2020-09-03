@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
       <div className='container'>
-        <video src={video} type='video/mp4'  className='video' autoPlay={true} />
+        <video src={video} type='video/mp4'  className='video' autoPlay={true} muted={true} />
          
       
 
