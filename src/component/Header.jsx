@@ -4,11 +4,25 @@ import DownArrow from '../assets/images/Arrow/Arrow.png';
 import video from '../assets/header-muted.mp4';
 
 
+const VideoWorkaround = ({ src }) => (
+  <div dangerouslySetInnerHTML={{ __html: `
+    <video
+      muted
+      autoplay
+      playsinline
+      src="${src}"
+      class='video'
+      type='video/mp4'
+    />
+  ` }}
+  />
+);
+
 const Header = () => {
   return (
     <header>
       <div className='container'>
-        <video src={video} type='video/mp4'  className='video' autoPlay={true} muted={true} />
+        <VideoWorkaround src={video}  />
          
       
 
