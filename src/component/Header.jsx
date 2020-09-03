@@ -2,15 +2,15 @@ import React from 'react';
 import ContactMethods from './ContactMethods';
 import DownArrow from '../assets/images/Arrow/Arrow.png';
 import video from '../assets/header-muted.mp4';
-import ReactPlayer from 'react-player';
+
 
 const Header = () => {
   return (
     <header>
       <div className='container'>
-        <video className='video' autoPlay loop>
-          <source src={video} type='video/mp4' />
-        </video>
+        <video src={video} type='video/mp4'  className='video' autoPlay={true} />
+         
+      
 
         {/* <ReactPlayer
           height='100%'
