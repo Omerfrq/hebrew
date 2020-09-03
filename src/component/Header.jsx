@@ -22,8 +22,10 @@ const Header = () => {
           >
             קבלו הצעת מחיר
           </button>
-          <div className='down-arrow bounce'>
-            <img src={DownArrow} alt='down-arrow' />
+          <div style={{
+            cursor:'pointer'
+          }}   onClick={() => (window.location.href = '#contact-form')} className='down-arrow bounce'>
+            <img  src={DownArrow} alt='down-arrow' />
           </div>
           <ContactMethods onNav={false} />
         </div>
