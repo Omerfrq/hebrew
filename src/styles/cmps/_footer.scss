@@ -70,6 +70,8 @@
   }
 
   @include mobile {
+    padding-bottom: 9rem;
+
     img {
       width: 20px;
       height: 20px;
@@ -96,6 +98,11 @@
           order: 2;
         }
       }
+    }
+
+    .all-right {
+      padding: 0 8px;
+      text-align: center;
     }
   }
 }

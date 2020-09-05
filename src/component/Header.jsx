@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
       <div className='container'>
-        <video className='video' autoPlay loop>
+        <video className='video' autoPlay loop controls>
           <source src={video} type='video/mp4' />
         </video>
 
