@@ -2,15 +2,29 @@ import React from 'react';
 import ContactMethods from './ContactMethods';
 import DownArrow from '../assets/images/Arrow/Arrow.png';
 import video from '../assets/header-muted.mp4';
-import ReactPlayer from 'react-player';
+
+const VideoWorkaround = ({ src }) => (
+  <div
+    dangerouslySetInnerHTML={{
+      __html: `
+    <video
+      muted
+      autoplay
+      playsinline
+      src="${src}"
+      class='video'
+      type='video/mp4'
+    />
+  `,
+    }}
+  />
+);
 
 const Header = () => {
   return (
     <header>
       <div className='container'>
-        <video className='video' autoPlay loop controls>
-          <source src={video} type='video/mp4' />
-        </video>
+        <VideoWorkaround src={video} />
 
         {/* <ReactPlayer
           height='100%'
