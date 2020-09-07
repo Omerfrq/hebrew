@@ -3,9 +3,10 @@ import ContactMethods from './ContactMethods';
 import DownArrow from '../assets/images/Arrow/Arrow.png';
 import video from '../assets/header-muted.mp4';
 
-
 const VideoWorkaround = ({ src }) => (
-  <div dangerouslySetInnerHTML={{ __html: `
+  <div
+    dangerouslySetInnerHTML={{
+      __html: `
     <video
       muted
       autoplay
@@ -14,7 +15,8 @@ const VideoWorkaround = ({ src }) => (
       class='video'
       type='video/mp4'
     />
-  ` }}
+  `,
+    }}
   />
 );
 
@@ -22,9 +24,7 @@ const Header = () => {
   return (
     <header>
       <div className='container'>
-        <VideoWorkaround src={video}  />
-         
-      
+        <VideoWorkaround src={video} />
 
         {/* <ReactPlayer
           height='100%'

@@ -17,11 +17,7 @@
 
       span {
         width: 80%;
-        font-size: 75%;
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        font-size: 70%;
       }
 
       .gallery-overlay {
@@ -70,7 +66,7 @@
     }
     @include narrow {
       grid-template-columns: repeat(1, 0.31fr);
-      grid-gap: 50px;
+      grid-gap: 70px;
     }
     @include normal {
       grid-template-columns: repeat(2, 0.3fr);
@@ -78,7 +74,7 @@
     }
     @include wide {
       grid-template-columns: repeat(3, 0.18fr);
-      grid-gap: 90px;
+      grid-gap: 110px;
     }
     text-align: center;
     font-family: Assistant-Semi-Bold;
@@ -86,6 +82,7 @@
   }
 
   .gallery-button {
+    margin-top: 10rem;
     text-align: center;
 
     button {
