@@ -7,11 +7,12 @@
     div {
       cursor: pointer;
       position: relative;
-      height: 240px;
+      height: 230px;
 
       img {
         height: 100%;
         border-radius: 0.6rem;
+        object-fit: cover;
       }
 
       span {

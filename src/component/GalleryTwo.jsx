@@ -1,13 +1,13 @@
 import React from 'react';
 import GalleryItemBox from './GalleryItemBox';
 //  Images
-import Image1 from '../assets/images/3d/page2img1.png';
-import Image2 from '../assets/images/3d/page2img2.png';
+import Image1 from '../assets/images/3d/page2img1.jpg';
+import Image2 from '../assets/images/3d/page2img2.jpg';
 import Image3 from '../assets/images/3d/page2img3.png';
 import Image4 from '../assets/images/3d/page2img4.png';
-import Image5 from '../assets/images/3d/page2img5.png';
+import Image5 from '../assets/images/3d/page2img5.jpg';
 import Image6 from '../assets/images/3d/page2img6.png';
-import Image7 from '../assets/images/3d/page2img7.png';
+import Image7 from '../assets/images/3d/page2img7.jpg';
 import Image8 from '../assets/images/3d/page2img8.png';
 import Image9 from '../assets/images/3d/page2img9.png';
 
@@ -80,7 +80,14 @@ const GalleryTwo = () => {
         />
       </div>
       <div className='gallery-button'>
-        <button onClick={() => window.location.href =`${window.location.origin}/#contact-form`} className='price-suggestion'>קבלו הצעת מחיר</button>
+        <button
+          onClick={() =>
+            (window.location.href = `${window.location.origin}/#contact-form`)
+          }
+          className='price-suggestion'
+        >
+          קבלו הצעת מחיר
+        </button>
       </div>
     </section>
   );
